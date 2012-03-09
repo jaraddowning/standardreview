@@ -11,11 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120309133934) do
+ActiveRecord::Schema.define(:version => 20120309210424) do
 
   create_table "areas", :force => true do |t|
     t.string   "name"
-    t.string   "num"
     t.text     "language"
     t.text     "overview"
     t.datetime "created_at"
@@ -24,6 +23,12 @@ ActiveRecord::Schema.define(:version => 20120309133934) do
   end
 
   add_index "areas", ["standard_id"], :name => "index_areas_on_standard_id"
+
+  create_table "com_recs", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "name"
@@ -38,15 +43,16 @@ ActiveRecord::Schema.define(:version => 20120309133934) do
     t.string   "address"
     t.string   "city"
     t.string   "zip"
-    t.string   "com_rec"
     t.text     "comment"
     t.text     "support"
     t.string   "signature"
     t.string   "rop_email"
     t.integer  "state_id"
+    t.integer  "com_rec_id"
   end
 
   add_index "projects", ["area_id"], :name => "index_projects_on_area_id"
+  add_index "projects", ["com_rec_id"], :name => "index_projects_on_com_rec_id"
   add_index "projects", ["standard_id"], :name => "index_projects_on_standard_id"
   add_index "projects", ["state_id"], :name => "index_projects_on_state_id"
 

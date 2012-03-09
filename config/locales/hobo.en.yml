@@ -80,8 +80,8 @@ en:
     # The action with added model variable are new, create, delete, save,
     # edit and back_to_parent
     actions:
-      new: "New %{model}"
-      create: "Create %{model}"
+      new: "%{model}"
+      create: "Submit %{model}"
       previous: "Previous"
       next: "Next"
       add: "Add"
@@ -152,7 +152,7 @@ en:
     # default hobo form translation
     form:
       new:
-        heading: "New %{model}"
+        heading: "%{model}"
       error:
         heading: "The following error occurred:"
       select_many:

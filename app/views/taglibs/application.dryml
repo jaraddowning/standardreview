@@ -25,21 +25,19 @@
 
 <extend tag="form" for="Project">
   <old-form merge>
-    COMMENT FORM FOR THE EMERGENCY MANAGEMENT STANDARD BY EMAP 2013
-    FINAL DATE FOR RECIEPT OF COMMENTS: August 14, 2012
+    <h2>COMMENT FORM FOR <i>THE EMERGENCY MANAGEMENT STANDARD</i> by EMAP 2013</h2><br />
+    <h4>FINAL DATE FOR RECIEPT OF COMMENTS: August 14, 2012</h4><br />
+    <h5>All fields on this form must be completed for the comment to be considered</h5><br />
     <field-list fields="date"/>
     <field-list fields="name, phone, email"/>
-    Some text
+
     <field-list fields="organization, address, city, state, zip">
       <state-view:>
         <select-one blank-message="Select a State"/>
       </state-view:>
-    </field-list>
-    Some different text
+    </field-list><br />
+    <hr />
     <field-list fields="standard, area">
-      <!--<standard-view:>
-        <select-one blank-message="Select a Standard"/>
-      </standard-view:>-->
       <area-view:>
         <do part="area-menu">
           <if test="&@project.standard">
@@ -50,13 +48,37 @@
           </else>
         </do>
       </area-view:>
+    </field-list><br />
+    <field-list fields="com_rec">
+      <com_rec-view:>
+        <select-one blank-message="Select the type of recommendation"/>
+      </com_rec-view:>
     </field-list>
-    <field-list fields="com_rec"/>
     <field-list fields="comment, support"/>
-    <h2>6. Copyright</h2>
+    <hr />
+    <h2>Copyright</h2>
     <p><i>I agree that all comments and substantiation listed on the above form shall be considered property of the Emergency Management Accreditation Program (EMAP) Technical Committee. To any extent that I retain rights to the above comments and substantiation I grant and assign full rights in copyright to EMAP. I further agree that by submitting this comment form I retain no rights to any publications by EMAP that may or may not use the above comments and substantiation and acknowledge the right of EMAP to register copyright in its name.</i></p><br />
     <field-list fields="signature, rop_email"/>
-    Ending text
-    <h2>PLEASE USE A SEPERATE FORM FOR EACH COMMENT</h2>   
+    <div class="actions">
+      <submit label="#{ht 'project.actions.save', :default=>['Save']}" param/><or-cancel/>
+    </div>
   </old-form>
+</extend>
+
+<extend tag="new-page" for="Project">
+  <old-new-page merge>
+    <append-content-body:>
+      <h2>PLEASE USE A SEPERATE FORM FOR EACH COMMENT</h2><br />
+      <h5>Contact EMAP:</h5>
+      Email: EMAP@csg.org<br />
+      Fax: (859) 244-8239<br />
+      Mail:<br />
+      Attn. Public Comment<br />
+      EMAP<br />
+      P.O. Box 11910<br />
+      Lexington, KY 40578<br />
+      <br />
+      For technical assistance please contact EMAP at (859) 244-8210
+    </append-content-body:>
+  </old-new-page>
 </extend>
