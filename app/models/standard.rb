@@ -3,8 +3,12 @@ class Standard < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
+    name   :string
+    number :string
     timestamps
   end
+
+  has_many :areas
 
   # --- Permissions --- #
 

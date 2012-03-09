@@ -3,8 +3,14 @@ class Area < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
+    name :string
+    num  :string
+    language :text
+    overview :text
     timestamps
   end
+
+  belongs_to :standard
 
   # --- Permissions --- #
 

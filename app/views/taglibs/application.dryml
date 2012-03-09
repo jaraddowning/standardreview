@@ -7,3 +7,56 @@
 <include src="taglibs/auto/rapid/forms"/>
 
 <set-theme name="clean"/>
+
+<extend tag="page">
+  <old-page merge without-live-search without-count>
+    <custom-scripts:>
+      <javascript name="ckeditor/ckeditor"/>
+      <javascript name="load_ckeditor"/>
+    </custom-scripts:>
+    <footer:>
+      <div>
+        <a href="http://ansi.emaponline.org/privacy.html">EMAP Privacy Policy</a>&nbsp;
+        Copyright &#64; 2012 - EMAP
+      </div>
+    </footer:>
+  </old-page>
+</extend>
+
+<extend tag="form" for="Project">
+  <old-form merge>
+    COMMENT FORM FOR THE EMERGENCY MANAGEMENT STANDARD BY EMAP 2013
+    FINAL DATE FOR RECIEPT OF COMMENTS: August 14, 2012
+    <field-list fields="date"/>
+    <field-list fields="name, phone, email"/>
+    Some text
+    <field-list fields="organization, address, city, state, zip">
+      <state-view:>
+        <select-one blank-message="Select a State"/>
+      </state-view:>
+    </field-list>
+    Some different text
+    <field-list fields="standard, area">
+      <!--<standard-view:>
+        <select-one blank-message="Select a Standard"/>
+      </standard-view:>-->
+      <area-view:>
+        <do part="area-menu">
+          <if test="&@project.standard">
+            <select-one options="&@project.standard.areas" blank-message="Please Select a Standard Area"/>
+          </if>
+          <else>
+            <select disabled><option>First choose a Standard</option></select>
+          </else>
+        </do>
+      </area-view:>
+    </field-list>
+    <field-list fields="com_rec"/>
+    <field-list fields="comment, support"/>
+    <h2>6. Copyright</h2>
+    <p><i>I agree that all comments and substantiation listed on the above form shall be considered property of the Emergency Management Accreditation Program (EMAP) Technical Committee. To any extent that I retain rights to the above comments and substantiation I grant and assign full rights in copyright to EMAP. I further agree that by submitting this comment form I retain no rights to any publications by EMAP that may or may not use the above comments and substantiation and acknowledge the right of EMAP to register copyright in its name.</i></p><br />
+    <field-list fields="signature, rop_email"/>
+    Ending text
+    <h2>PLEASE USE A SEPERATE FORM FOR EACH COMMENT</h2>   
+  </old-form>
+</extend>
