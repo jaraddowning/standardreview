@@ -31,7 +31,7 @@ class Project < ActiveRecord::Base
   validates_presence_of :area, :on => :submit
 
   after_create do |project|
-    ProjectMailer.standard_comment(id, name, date, phone, organization, email, address, city, state, zip, standard, area, com_rec, comment, support, rop_email, project.count).deliver
+    ProjectMailer.standard_comment(id, name, date, phone, organization, email, address, city, state, zip, standard, area, com_rec, comment, support, rop_email).deliver
   end
 
   # --- Permissions --- #
