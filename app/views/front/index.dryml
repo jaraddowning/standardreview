@@ -4,12 +4,8 @@
 
   <content:>
     <header class="content-header">
-      <h1>Welcome to <app-name/></h1>
+      <h1>Follow the link below to submit a comment on the proposed Emergency Management Standard by EMAP</h1>
       <section class="welcome-message">
-        <h3>Congratulations! Your Hobo Rails App is up and running</h3>
-        <ul>
-          <li>To customise this page: edit app/views/front/index.dryml</li>
-        </ul>
 
         <% if User.count == 0 -%>
           <h3 style="margin-top: 20px;">There are no user accounts - please provide the details of the site administrator</h3>
@@ -19,11 +15,12 @@
           </form>
         <% end -%>
 
-
       </section>
     </header>
 
-    <section class="content-body">
+    <section with="&@project" class="content-body">
+      <a href="#{Rails.root}/projects/new">New Proposed Change to EMAP Standard Language
+      </a>
     </section>
   </content:>
 
