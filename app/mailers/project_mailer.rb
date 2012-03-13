@@ -5,7 +5,7 @@ class ProjectMailer < ActionMailer::Base
     @id, @name, @date, @phone, @organization, @email, @address, @city, @state, @zip, @standard, @area, @com_rec, @comment, @support, @rop_email = id, name, date, phone, organization, email, address, city, state, zip, standard, area, com_rec, comment, support, rop_email
     mail( :subject => "Comment for the Emergency Management Standard by EMAP - 2013",
           :to      => rop_email,
-          :bcc      => "jaraddowning@gmail.com" )
+          :bcc      => "sgauvin@csg.org, emap@csg.org, nishmael@csg.org" )
   end
 
 end
