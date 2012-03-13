@@ -7,7 +7,7 @@ body {
 
 div.page-header h1.app-name {
   text-indent: -10000px;
-  background: url(../images/EMAPlogo.png) 70px 5px no-repeat;
+  background: url(../images/EMAPlogo.png) 90px 20px no-repeat;
   padding: 10px 10px 10px 10px; margin: 0;
   height: 62px;
 }
@@ -27,6 +27,6 @@ div.page-header h1.app-name {
 }
 
 .page-header {
-  background-color: #4E81B8;
+  background-color: #FFFFFF;
   background-image: none;
 }
