@@ -1,0 +1,32 @@
+body {
+	background: url(../images/webbackground.png) -150px -5px no-repeat;
+	background-color: #4E81B8;	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+div.page-header h1.app-name {
+  text-indent: -10000px;
+  background: url(../images/EMAPlogo.png) 70px 5px no-repeat;
+  padding: 10px 10px 10px 10px; margin: 0;
+  height: 62px;
+}
+
+.main-nav {
+  text-indent: -10000px;
+  position: relative;
+  left: -10000px;
+}
+
+.account-nav {
+  text-indent: -10000px;
+}
+
+.section.content {
+  background-color: #FFFFFF;
+}
+
+.page-header {
+  background-color: #4E81B8;
+  background-image: none;
+}

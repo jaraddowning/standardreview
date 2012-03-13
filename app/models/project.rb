@@ -25,10 +25,13 @@ class Project < ActiveRecord::Base
   belongs_to :area
 
   #validates_presence_of :state, :com_rec, :standard, :area
+  validates_presence_of :state, :on => :submit
+  validates_presence_of :com_rec, :on => :submit
+  validates_presence_of :standard, :on => :submit
+  validates_presence_of :area, :on => :submit
 
   after_create do |project|
-    ProjectMailer.standard_comment(id, name, date, phone, organization, email, address, city, state, zip, standard,
-                                      area, com_rec, comment, support, rop_email).deliver
+    ProjectMailer.standard_comment(id, name, date, phone, organization, email, address, city, state, zip, standard, area, com_rec, comment, support, rop_email, project.count).deliver
   end
 
   # --- Permissions --- #
