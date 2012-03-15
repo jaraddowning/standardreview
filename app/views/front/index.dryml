@@ -19,7 +19,7 @@
     </header>
 
     <section with="&@project" class="content-body">
-      <a href="#{Rails.root}/projects/new">New Proposed Change to EMAP Standard Language
+      <a href="http://standardreview.emaponline.org/projects/new">New Proposed Change to EMAP Standard Language
       </a>
     </section>
   </content:>
