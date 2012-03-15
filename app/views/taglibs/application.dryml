@@ -16,7 +16,7 @@
     </custom-scripts:>
     <footer:>
       <div>
-        <a href="#{Rails.root}/privacy.html">EMAP Privacy Policy</a>&nbsp;
+        <a href="../privacy.html">EMAP Privacy Policy</a>&nbsp;
         Copyright &#64; 2012 - EMAP
       </div>
     </footer:>
