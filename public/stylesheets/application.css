@@ -51,3 +51,13 @@ h2 {
 .mesg {
   text-align:center;
 }
+
+a {
+  color: #0000CC;
+}
+
+.stdimage {
+  position: absolute;
+  left: 75em;
+  top: 16em;
+}
