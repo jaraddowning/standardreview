@@ -57,7 +57,7 @@ a {
 }
 
 .stdimage {
-  position: absolute;
-  left: 75em;
-  top: 16em;
+  position: relative;
+  left: 55em;
+  top: -14em;
 }
